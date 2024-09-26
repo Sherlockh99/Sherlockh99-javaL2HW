@@ -1,6 +1,6 @@
-package lesson1;
+package lesson1.beings;
 
-public class Cat implements RunJumpable{
+public class Cat implements RunJumpable {
 
     private String name;
     private final double MAX_JUMP = 3.0;
@@ -14,9 +14,9 @@ public class Cat implements RunJumpable{
     @Override
     public boolean run(double dist) {
         if(dist<=MAX_RUN){
-            System.out.printf("Кот %s смог пробежать %s м. \n",name,dist);
+            System.out.printf("The cat %s was able to run %s m. \n",name,dist);
         }else{
-            System.out.printf("Кот %s не смог пробежать %s м. \n",name,dist);
+            System.out.printf("The cat %s could not run %s m. \n",name,dist);
         }
         return dist<=MAX_RUN;
     }
@@ -24,9 +24,9 @@ public class Cat implements RunJumpable{
     @Override
     public boolean jump(double dist) {
         if(dist<=MAX_JUMP){
-            System.out.printf("Кот %s смог перепрыгнуть %s м. \n",name,dist);
+            System.out.printf("The cat %s was able to jump %s m. \n",name,dist);
         }else{
-            System.out.printf("Кот %s не смог перепрыгнуть %s м. \n",name,dist);
+            System.out.printf("The cat %s could not jump %s m. \n",name,dist);
         }
         return dist<=MAX_JUMP;
     }
